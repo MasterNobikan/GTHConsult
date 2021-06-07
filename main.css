@@ -1,0 +1,155 @@
+
+/*=====
+Global CSS
+======*/
+body { 
+  margin: 0;
+  font-size: 1.5em; /* content text is the same size */
+  box-sizing: border-box;
+  text-align: center;
+  background: #fff;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular','Lucida Grande','Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+h2 {
+  color: #1dafec;
+  font-size: 2.6em;
+}
+.blu { /* colors text on black sections */
+  color: #1dafec;
+}
+.fas, .fab { /* icon style */
+  color: #1dafec;
+  font-size: 5.2em;
+}
+fai {
+  max-width: 50px;
+  max-height: 50px;
+  fill: #1dafec;
+}
+
+/*=====
+Local CSS
+======*/
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  margin: 20px 0;
+  max-width: 300px;
+  max-height: 300px;
+  border-radius: 10px;
+}
+.top-right {  /* may be too big */
+  display: flex;
+  justify-content: center;
+  color: #1dafec;
+  font-size: 2em;
+}
+.intro {
+  background: #000;
+}
+.top-col { /* first columns only */
+  padding: 0 38px; /* dropped two pixels (40 to 38) */
+}
+
+.columns { /* standard parent container for spacing */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 40px;
+}
+.columns p { /* to align content edges */
+  padding: 0 48.5px;
+}
+
+.services {
+  display: flex;
+  flex-flow: column wrap;
+  padding: 60px;
+}
+.services p { /* this was misspelled*/
+  padding: 0 80px;
+}
+
+.tech {
+  display:flex;
+  color: #1dafec;
+  background: #000;
+  align-items: center;
+  flex-flow: column wrap;
+  padding-bottom: 40px;
+}
+section.tech > div{
+  padding: 10px;
+}
+
+.who {
+  background: #fff;
+  padding: 80px 100px;
+}
+
+.talk {
+  background: #000;
+  padding: 80px 20px;
+}
+
+/*===
+Media Queries
+====*/
+
+/* fixes overall text design for mobile */
+@media (max-width: 1270px) { 
+  .columns, header, .top-col { 
+      flex-direction: column;
+      padding: 40px 0;
+  }
+  .col {
+      margin: 20px 0;
+  }
+}
+@media (max-width: 670px) {
+  .top-right {
+    font-size: 1.1em;
+  }
+  .title {
+    font-size: 1.3em;
+  }
+  .services {
+    padding: 20px;
+  }
+  .services p {
+    padding: 0;
+  }
+}
+@media (max-width: 550px) {
+  .who {
+    padding: 50px;
+  }
+}
+
+
+/* ======
+Animations
+========*/
+
+@keyframes text-reveal{
+  0%{
+      opacity: 0;
+      }
+  25%{
+      opacity: 0.3;
+      }
+  50%{
+      opacity: 0.5;
+      }
+  75%{
+      opacity: 0.7;
+      }
+  100%{
+      opacity: 1;
+      }
+}
